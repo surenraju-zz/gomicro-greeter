@@ -1,5 +1,12 @@
 # Gomicro-Greeter Service
 
+# Get Go Micro and Protogen Micro
+```
+go get github.com/micro/micro
+go get github.com/micro/protoc-gen-micro
+```
+
+
 This is the Gomicro-Greeter service
 
 Generated with
@@ -26,13 +33,13 @@ Micro services depend on service discovery. The default is multicast DNS, a zero
 
 In the event you need a resilient multi-host setup we recommend consul.
 
+#Run Consul
 ```
-# install consul
-brew install consul
+consul agent --dev
+```
 
-# run consul
-consul agent -dev
-```
+Pass ```--registry=consul``` or set the env var ```MICRO_REGISTRY=consul``` for any command
+
 
 ## Usage
 
